@@ -6,45 +6,19 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-    int Number1 = 0;
-    int Number2 = 0;
-    float Sum = 0;
-    char Operation;
+	int number = 1;
+	int sum1 = 0;
 
-    std::cout << "Введите перове число --> ";
-    std::cin >> Number1;
-    std::cout << "\nВведите операцию ( + , - , * , / , % ) --> ";
-    std::cin >> Operation;
-    std::cout << "\nВведите второе число --> ";
-    std::cin >> Number2;
+	while (number != 0)
+	{
 
-    if (Operation == '+')
-    {
-        Sum = Number1 + Number2;
-    }
-    else if (Operation == '-')
-        {
-            Sum = Number1 - Number2;
-        }
-    else if (Operation == '*')
-        {
-            Sum = Number1 * Number2;
-        }
-    else if (Operation == '/')
-        {
-            if (Number2 == 0)
-            {
-                std::cout << "\nНизя на 0 делить";
-                return 0;
-            }
-            Sum = Number1 / Number2;
-        }
-    else if (Operation == '%')
-        {
-            Sum = (Number1 * 0.01) * Number2;
-        }
+		std::cout << "Введите число --> ";
+		std::cin >> number;
+		sum1 = sum1 + number;
 
-    std::cout << "\n" << Number1 << " " << Operation << " " << Number2 << " = " << Sum;
+	}
+	
+	std::cout << "Сумма всех чисел равна " << sum1;
 
 	return 0;
 }
